@@ -30,7 +30,9 @@ PROMPT_COMMAND= ”history -a”
 2- installation 
 
 #########################---Install Osquery
+go to  official web site and download last version of osquery 
 
+https://www.osquery.io/downloads/official/
 
 #######------ install on Debian base
 
@@ -48,15 +50,16 @@ $sudo rpm -i osquery-laset-version.linux.x86_64.rpm
 
 3- config Osquery 
 
+Download github osquery-config and go to osquery-config-main 
 
 ##################### -- copy config file
 
-copy  osquery.conf  osquery.flags   extensions.load in /etc/osquery by this command
+copy  osquery.conf  osquery.flags   extensions.load  to  /etc/osquery by this command
 
 
 $ sudo   cp  extensions.load  osquery.*   /etc/osquery/
 
-$ sudo  cp packs/*     /opt/osquery/share/osquery/packs/
+$ sudo  cp packs/*   /opt/osquery/share/osquery/packs/
 
 $ sudo  vi /etc/rsyslog.d/osquery.conf
 
@@ -85,7 +88,10 @@ $sudo systemctl enable osqueryd.service
 #####    (Only Suse distro) 
 $ sudo chkconfig osqueryd on  
 ############
+
 $sudo systemctl status osqueryd.service
+
+
 
 
 
